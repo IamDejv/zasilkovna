@@ -14,7 +14,7 @@ use Salamek\Zasilkovna\Model\IBranchStorage;
 class Branch
 {
     /** @var string */
-    private $jsonEndpoint = 'https://www.zasilkovna.cz/api/v3/%s/branch.json';
+    private $jsonEndpoint = 'https://www.zasilkovna.cz/api/v4/%s/branch.json';
 
     /** @var string */
     private $apiKey;
@@ -33,8 +33,6 @@ class Branch
         $this->branchStorage = $branchStorage;
 
         $this->jsonEndpoint = sprintf($this->jsonEndpoint, $this->apiKey);
-
-        $this->initializeStorage();
     }
 
     /**
